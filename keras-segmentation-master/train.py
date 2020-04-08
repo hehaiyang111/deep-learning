@@ -11,10 +11,10 @@ train_segs_path = "data/dataset1/annotation_prepped_train/"
 train_batch_size = 5
 n_classes = 11
 
-epochs = 200
+epochs = 1
 
-input_height = 320
-input_width = 320
+input_height = 224
+input_width = 224
 
 
 val_images_path = "data/dataset1/images_prepped_test/"

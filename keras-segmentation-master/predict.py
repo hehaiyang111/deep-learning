@@ -17,10 +17,10 @@ method = {
     'unet': UNet.UNet}
 
 images_path = "data/dataset1/images_prepped_test/"
-segs_path = "data/dataset1/annotations_prepped_test/"
+segs_path = "data/dataset1/annotation_prepped_test/"
 
-input_height = 320
-input_width = 320
+input_height = 224
+input_width = 224
 
 colors = [
     (random.randint(
@@ -66,7 +66,7 @@ segmentations = sorted(glob.glob(segs_path + "*.jpg") +
 
 
 # m = load_model("output/%s_model.h5" % key)
-m = method[key](11, 320, 320)  # 有自定义层时，不能直接加载模型
+m = method[key](11, 224, 224)  # 有自定义层时，不能直接加载模型
 m.load_weights("output/%s_model.h5" % key)
 
 for i, (imgName, segName) in enumerate(zip(images, segmentations)):
