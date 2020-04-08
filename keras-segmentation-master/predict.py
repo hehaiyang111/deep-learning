@@ -8,7 +8,7 @@ import random
 
 n_classes = 11
 
-key = "unet"
+key = "fcn32"
 
 method = {
     "fcn32": FCN32.FCN32,
